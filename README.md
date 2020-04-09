@@ -6,9 +6,8 @@ This repository provides basic examples of how to include individual icons packa
 
 ### Brand icons
 
-#### [SimpleIcons](https://github.com/simple-icons/simple-icons)
-
-- [Webpack](https://htmlpreview.github.io/?https://github.com/mondeja/indicon-pack-howto/blob/master/webpack/simpleicons/index.html)
+- **[SimpleIcons](https://github.com/simple-icons/simple-icons)**
+    - [Webpack](https://htmlpreview.github.io/?https://github.com/mondeja/indicon-pack-howto/blob/master/webpack/simpleicons/index.html)
 
 ## Thanks
 - [SimpleIcons](https://github.com/simple-icons/simple-icons)
