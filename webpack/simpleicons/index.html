@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webpack Package Individual Icon</title>
+  <link href="../../_assets/css/common.css" rel="stylesheet"> 
+  <link href="../../_assets/css/highlightjs/color-brewer.css" rel="stylesheet"> 
+  <script src="dist/bundle.js"></script>
+</head>
+<body>
+  <h1>Webpack - <a href="https://github.com/simple-icons/simple-icons/"
+                   target="blank">Simple Icons</a></h1>
+  
+  <div class="example" id="config">
+    <h2>Configuration</h2>
+    <pre class="exported input"><code class="bash">npm install webpack webpack-cli svg-inline-loader simple-icons
+cat webpack.config.js</code></pre>
+    <pre class="exported output"><code class="javascript">const path = require('path');
+
+module.exports = {
+  entry: './index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        use: "svg-inline-loader",
+      }
+    ]
+  }
+};</code></pre>
+  </div>
+  
+  <div class="example" id="icon-as-module">
+    <h2>Include an icon as a module</h2>
+    <pre class="exported input"><code class="javascript">const pythonIcon = require("simple-icons/icons/python");
+console.log(pythonIcon);</code></pre>
+    <pre class="exported output"><code class="json"></code></pre>
+    
+    <pre class="export-to-img input"><code class="javascript">const svgElem = new DOMParser().parseFromString(
+  pythonIcon.svg, "text/xml").documentElement;
+svgElem.setAttribute("height", "30px");
+svgElem.setAttribute("width", "30px");
+svgElem.setAttribute("fill", "#" + pythonIcon.hex);
+
+document.querySelector("#container").appendChild(svgElem);</code></pre>
+    <div class="export-to-img output"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0px 45px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #94002D;
+}
+a:hover {
+    opacity: .79;
+}
+
+.example {
+  margin: 20px;
+  border-bottom: 1px solid #EEE;
+  padding: 0px 0px 30px 0px;
+}
+
+.example h2 {
+    font-size: 25px;
+}
+
+.example .input {
+    margin: 0px 0px 0px 20px;
+    color: #000;
+    background-color: rgba(255, 178, 115, .3);
+    padding: 15px 25px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-weight: 500;
+}
+
+.example .output {
+    margin: -1px 0px 0px 30px;
+    border: 1px solid rgba(255, 178, 115, .3);
+    border-top: none;
+    padding: 22px 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
