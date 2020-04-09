@@ -1,13 +1,27 @@
 # How to pack SVG icons individually to your application
 
-This repository provides basic examples of how to include individual icons packaging your applications. Can be used as a cheatsheet to see how to include easily icons of different types into your applications.
+This repository provides basic examples of how to include individual icons packaging your applications. Can be used as a cheatsheet of how to include easily icons of different types into your applications.
+
+## Why individual icons packaging is important
+Building large applications, we need to use modular flexible third party dependencies that can be used without increase the source code size too much. I don't want a huge library of icons loaded in my app that I will never use, ever a collection of 30 icons of the same category. How do you split a category?  
+
+So all the examples listed here use libraries that provide individual icons packaging easily.
+
 
 ## Content
 
 ### Brand icons
 
 - **[SimpleIcons](https://github.com/simple-icons/simple-icons)**
-    - [Webpack](https://mondeja.github.io/indicon-pack-howto/webpack/simpleicons/)
+
+    - [Webpack](https://mondeja.github.io/indicon-pack-howto/examples/webpack/simpleicons/)
+
+## TODO
+- [ ] [mapbox/maki](https://github.com/mapbox/maki) (Cartography, by subcategories)
+- [ ] [@fortawesome/free-brands-svg-icons](https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons) (Brand)
+- [ ] [@fortawesome/free-solid/regular-svg-icons](https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons) (General)
+- [ ] [ideditor/temaki](https://github.com/ideditor/temaki) (General)
+- [ ] [material-design-icons](https://www.npmjs.com/package/material-design-icons) (General, by categories)
 
 ## Thanks
 - [SimpleIcons](https://github.com/simple-icons/simple-icons)
