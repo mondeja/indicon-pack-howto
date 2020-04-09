@@ -14,8 +14,14 @@ Building large applications, we need to use modular flexible third party depende
     - [Webpack](https://mondeja.github.io/indicon-pack-howto/examples/simple-icons/webpack/)
     - [Rollup](https://mondeja.github.io/indicon-pack-howto/examples/simple-icons/rollup/)
 
+### GIS
+
+- **maki**
+
+    - [Webpack](https://mondeja.github.io/indicon-pack-howto/examples/maki/webpack/)
+    - [Rollup](https://mondeja.github.io/indicon-pack-howto/examples/maki/rollup/)
+
 ## TODO
-- [ ] [mapbox/maki](https://github.com/mapbox/maki) (Cartography, by subcategories)
 - [ ] [@fortawesome/free-brands-svg-icons](https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons) (Brand)
 - [ ] [@fortawesome/free-solid/regular-svg-icons](https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons) (General)
 - [ ] [ideditor/temaki](https://github.com/ideditor/temaki) (General)

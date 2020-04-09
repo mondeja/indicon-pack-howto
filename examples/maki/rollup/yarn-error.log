@@ -1,0 +1,47 @@
+Arguments: 
+  /usr/bin/node /home/mondeja/.yarn/bin/yarn.js install
+
+PATH: 
+  /home/mondeja/gems/bin:/home/mondeja/.yarn/bin:/home/mondeja/.config/yarn/global/node_modules/.bin:/home/mondeja/miniconda3/condabin:/home/mondeja/.yarn/bin:/home/mondeja/.config/yarn/global/node_modules/.bin:/home/mondeja/.local/bin:/home/mondeja/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  13.12.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/mondeja/files/code/indicon-pack-howto/examples/maki/rollup/package.json: Unexpected token } in JSON at position 458
+      at JSON.parse (<anonymous>)
+      at /home/mondeja/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/home/mondeja/.yarn/lib/cli.js:310:30)
+      at /home/mondeja/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "indicon-pack-howto-maki-rollup",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "build": "node_modules/.bin/rollup --config rollup.config.js"
+    },
+    "author": "Álvaro Mondéjar <mondejar1994@gmail.com>",
+    "license": "BSD-3-Clause",
+    "dependencies": {
+      "highlight.js": "^9.18.1",
+      "rollup": "^2.3.5",
+      "rollup-plugin-commonjs": "^10.1.0",
+      "rollup-plugin-node-resolve": "^5.2.0",
+      "rollup-plugin-svg": "^2.0.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

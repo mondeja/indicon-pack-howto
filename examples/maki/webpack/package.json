@@ -1,0 +1,17 @@
+{
+  "name": "indicon-pack-howto-maki-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack"
+  },
+  "author": "Álvaro Mondéjar <mondejar1994@gmail.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "highlight.js": "^9.18.1",
+    "maki": "^2.1.0",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

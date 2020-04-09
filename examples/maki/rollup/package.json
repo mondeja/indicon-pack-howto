@@ -1,5 +1,5 @@
 {
-  "name": "indicon-pack-howto-simple-icons-rollup",
+  "name": "indicon-pack-howto-maki-rollup",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "highlight.js": "^9.18.1",
+    "maki": "^2.1.0",
     "rollup": "^2.3.5",
-    "rollup-plugin-svg": "^2.0.0",
-    "simple-icons": "^2.8.0"
+    "rollup-plugin-svg": "^2.0.0"
   }
 }

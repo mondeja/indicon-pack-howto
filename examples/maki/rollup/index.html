@@ -46,32 +46,15 @@ export default {
   
   
   <div class="example" id="icon-as-svg">
-    <h2>Include an icon directly from SVG (rollup-plugin-svg required)</h2>
-    <pre class="inspect input"><code class="javascript">const pythonIconSVG = require("simple-icons/icons/python.svg");
-console.log(pythonIcon);</code></pre>
+    <h2>Include an icon directly from SVG (svg-inline-loader required)</h2>
+    <pre class="inspect input"><code class="javascript">const cafeIcon = require("maki/icons/cafe-15.svg");
+console.log(cafeIcon);</code></pre>
     <pre class="inspect output"><code class="javascript"></code></pre>
     
     <pre class="render input"><code class="javascript">const svgElem = new DOMParser().parseFromString(
-  pythonIconSVG, "text/xml").documentElement;
+  cafeIcon, "text/xml").documentElement;
 svgElem.setAttribute("height", "30px");
 svgElem.setAttribute("width", "30px");
-
-document.querySelector("#container").appendChild(svgElem);</code></pre>
-    <div class="render output"></div>
-  </div>
-  
-  
-  <div class="example" id="icon-as-module">
-    <h2>Include an icon as a module</h2>
-    <pre class="inspect input"><code class="javascript">const pythonIcon = require("simple-icons/icons/python");
-console.log(pythonIcon);</code></pre>
-    <pre class="inspect output"><code class="json"></code></pre>
-    
-    <pre class="render input"><code class="javascript">const svgElem = new DOMParser().parseFromString(
-  pythonIcon.svg, "text/xml").documentElement;
-svgElem.setAttribute("height", "30px");
-svgElem.setAttribute("width", "30px");
-svgElem.setAttribute("fill", "#" + pythonIcon.hex);
 
 document.querySelector("#container").appendChild(svgElem);</code></pre>
     <div class="render output"></div>
