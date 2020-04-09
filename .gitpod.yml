@@ -1,0 +1,3 @@
+tasks:
+  - init: echo "HELLO INIT GITPOD"
+    command: echo "HELLO GITPOD"
