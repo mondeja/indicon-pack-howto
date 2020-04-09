@@ -2,8 +2,9 @@
 
 import path from "path";
 
-import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import resolve from 'rollup-plugin-node-resolve';
+import svg from 'rollup-plugin-svg'
 
 export default {
   input: 'index.js',
@@ -14,6 +15,7 @@ export default {
   },
   plugins: [
     resolve(),
-    commonjs()
+    commonjs(),
+    svg(),
   ]
 };

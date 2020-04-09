@@ -5,35 +5,38 @@ const hljs = require('highlight.js');
 // Include icon as module
 const pythonIcon = require('simple-icons/icons/python');
 
+// Include icon as SVG
+const pythonIconSVG = require('simple-icons/icons/python.svg');
+
 document.addEventListener("DOMContentLoaded", function() {
-  const buildIncludeIconAsModuleOutput = function() {
-    const parser = new DOMParser();
-    const pythonIconSvgDomElement = parser.parseFromString(
-      pythonIcon.svg, "text/xml").documentElement;
-    const pythonIconPath = pythonIconSvgDomElement.getElementsByTagName("path")[0];
-    pythonIconPath.setAttribute("d", pythonIconPath.getAttribute("d").substring(0, 40) + "...")
-    
-    const output = {}
-    for (let key in pythonIcon) {
-      if (key == "path") {
-        output[key] = pythonIcon[key].substring(0, 40) + "..."
-      } else if (key == "svg") {
-        output[key] = pythonIconSvgDomElement.outerHTML
-      } else {
-        output[key] = pythonIcon[key]
-      }
-    }
+  const buildImportIconAsInlineSvgOutput = function() {
+    var outputString = "'" + pythonIconSVG + "'";
+    console.log(outputString)
+    const container = document.querySelector(
+      "#icon-as-svg .inspect.output code");
+    container.innerText = outputString;
+  }
+  
+  const buildModuleAsInlineSVGToDom = function() {
+    const domParser = new DOMParser()
+    const svgElem = domParser.parseFromString(
+      pythonIconSVG, "text/xml").documentElement;
+    svgElem.setAttribute("height", "30px");
+    svgElem.setAttribute("width", "30px");
+    const container = document.querySelector(
+      "#icon-as-svg .render.output");
+    container.appendChild(svgElem)
+  }
+  
+  const buildImportIconAsModuleOutput = function() {
     const iconAsModuleOutputContainer = document.querySelector(
-      "#icon-as-module > .exported.output code");
+      "#icon-as-module > .inspect.output code");
     
-    const outputString = JSON.stringify(
-      output, null, 2).replace(
-      /[^\/]></g, '>" +\n     "<').replace(
-      "/>", '/>" + \n   "');
+    const outputString = JSON.stringify(pythonIcon, null, 2)
     iconAsModuleOutputContainer.innerText = outputString;
   }
   
-  const buildModuleAsIconToImage = function() {
+  const buildImportIconAsModuleToDom = function() {
     const domParser = new DOMParser()
     const svgElem = domParser.parseFromString(
       pythonIcon.svg, "text/xml").documentElement;
@@ -41,16 +44,21 @@ document.addEventListener("DOMContentLoaded", function() {
     svgElem.setAttribute("width", "30px");
     svgElem.setAttribute("fill", "#" + pythonIcon.hex)
     const container = document.querySelector(
-      "#icon-as-module .export-to-img.output");
-    container.appendChild(svgElem);
-    
+      "#icon-as-module .render.output");
+    container.appendChild(svgElem);  
   }
-
-  // Module as icon example
-  buildIncludeIconAsModuleOutput();
   
-  // Module as icon to omage
-  buildModuleAsIconToImage();
+  // Module as inline SVG inspection
+  buildImportIconAsInlineSvgOutput();
+  
+  // Module as inline SVG to image
+  buildModuleAsInlineSVGToDom();
+
+  // Module as icon inspection
+  buildImportIconAsModuleOutput();
+  
+  // Module as icon to image
+  buildImportIconAsModuleToDom();
   
   document.querySelectorAll('pre code').forEach((block) => {
     hljs.highlightBlock(block);
