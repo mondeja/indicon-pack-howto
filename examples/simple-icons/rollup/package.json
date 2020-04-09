@@ -1,0 +1,17 @@
+{
+  "name": "indicon-pack-howto-simple-icons-rollup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/rollup --config rollup.config.js"
+  },
+  "author": "Álvaro Mondéjar <mondejar1994@gmail.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "highlight.js": "^9.18.1",
+    "rollup": "^2.3.5",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "simple-icons": "^2.8.0"
+  }
+}

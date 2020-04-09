@@ -4,37 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webpack Package Individual Icon</title>
+  <title>Rollup Package Individual Icon from simple-icons</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <link href="../../../assets/css/common.css" rel="stylesheet"> 
   <link href="../../../assets/css/highlightjs/color-brewer.css" rel="stylesheet"> 
   <script src="dist/bundle.js"></script>
 </head>
 <body>
-  <h1>Webpack + <a href="https://github.com/simple-icons/simple-icons/"
+  <h1>Rollup + <a href="https://github.com/simple-icons/simple-icons/"
                    target="blank">Simple Icons</a></h1>
   
   <div class="example" id="config">
     <h2>Configuration</h2>
-    <pre class="exported input"><code class="bash">npm install webpack webpack-cli svg-inline-loader simple-icons
-cat webpack.config.js</code></pre>
-    <pre class="exported output"><code class="javascript">const path = require('path');
+    <pre class="exported input"><code class="bash">npm install rollup \\
+    rollup-plugin-node-resolve \\
+    rollup-plugin-commonjs \\
+    simple-icons
+cat rollup.config.js</code></pre>
+    <pre class="exported output"><code class="javascript">import path from "path";
 
-module.exports = {
-  entry: './index.js',
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+
+export default {
+  input: 'index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    file: path.resolve(__dirname, "dist", "bundle.js"),
+    format: 'iife',
+    name: "bundle",
   },
-  module: {
-    rules: [
-      {
-        test: /\.svg$/,
-        use: "svg-inline-loader",
-      }
+  plugins: [
+        resolve(),
+        commonjs()
     ]
-  }
-};</code></pre>
+};
+</code></pre>
   </div>
   
   <div class="example" id="icon-as-module">

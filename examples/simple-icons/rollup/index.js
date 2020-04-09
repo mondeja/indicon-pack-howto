@@ -56,4 +56,4 @@ document.addEventListener("DOMContentLoaded", function() {
     hljs.highlightBlock(block);
     block.style.background = "rgba(255,255,255,0)"
   });
-})
+});
