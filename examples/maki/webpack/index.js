@@ -10,7 +10,6 @@ const cafeIcon = require('maki/icons/cafe-15.svg');
 document.addEventListener("DOMContentLoaded", function() {
   const buildImportIconAsInlineSvgOutput = function() {
     var outputString = "'" + cafeIcon + "'";
-    console.log(outputString)
     const container = document.querySelector(
       "#icon-as-svg .inspect.output code");
     container.innerText = outputString;

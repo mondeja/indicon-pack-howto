@@ -13,7 +13,6 @@ const pythonIconSVG = require('simple-icons/icons/python.svg');
 document.addEventListener("DOMContentLoaded", function() {
   const buildImportIconAsInlineSvgOutput = function() {
     var outputString = "'" + pythonIconSVG + "'";
-    console.log(outputString)
     const container = document.querySelector(
       "#icon-as-svg .inspect.output code");
     container.innerText = outputString;
