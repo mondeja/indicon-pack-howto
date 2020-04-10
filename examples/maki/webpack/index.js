@@ -1,6 +1,8 @@
 "use strict"
 
-const hljs = require('highlight.js');
+var hljs = require("highlight.js/lib/highlight");
+hljs.registerLanguage('json', require('highlight.js/lib/languages/json'));
+hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
 
 // Include icon as SVG
 const cafeIcon = require('maki/icons/cafe-15.svg');

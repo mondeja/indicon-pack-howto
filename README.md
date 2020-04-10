@@ -28,4 +28,5 @@ Building large applications, we need to use modular flexible third party depende
 - [ ] [material-design-icons](https://www.npmjs.com/package/material-design-icons) (General, by categories)
 
 ## Thanks
+- [Maki](https://github.com/mapbox/maki)
 - [SimpleIcons](https://github.com/simple-icons/simple-icons)
