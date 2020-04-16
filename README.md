@@ -20,13 +20,19 @@ Building large applications, we need to use modular flexible third party depende
 
     - [Webpack](https://mondeja.github.io/indicon-pack-howto/examples/maki/webpack/)
     - [Rollup](https://mondeja.github.io/indicon-pack-howto/examples/maki/rollup/)
+    
+- **temaki**
+    
+    - [Webpack](https://mondeja.github.io/indicon-pack-howto/examples/temaki/webpack/)
+    - [Rollup](https://mondeja.github.io/indicon-pack-howto/examples/temaki/rollup/)
 
 ## TODO
 - [ ] [@fortawesome/free-brands-svg-icons](https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons) (Brand)
 - [ ] [@fortawesome/free-solid/regular-svg-icons](https://fontawesome.com/how-to-use/with-the-api/setup/importing-icons) (General)
-- [ ] [ideditor/temaki](https://github.com/ideditor/temaki) (General)
 - [ ] [material-design-icons](https://www.npmjs.com/package/material-design-icons) (General, by categories)
+- [x] [ideditor/temaki](https://github.com/ideditor/temaki) (General)
 
 ## Thanks
 - [Maki](https://github.com/mapbox/maki)
 - [SimpleIcons](https://github.com/simple-icons/simple-icons)
+- [Temaki](https://github.com/ideditor/temaki)

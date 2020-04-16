@@ -1,0 +1,18 @@
+{
+  "name": "indicon-pack-howto-temaki-rollup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/rollup --config rollup.config.js"
+  },
+  "author": "Álvaro Mondéjar <mondejar1994@gmail.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "highlight.js": "^9.18.1",
+    "rollup": "^2.3.5",
+    "rollup-plugin-svg": "^2.0.0",
+    "temaki": "^2.3.0"
+  }
+}

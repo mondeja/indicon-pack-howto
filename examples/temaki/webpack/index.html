@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Package individual icon from maki with Webpack</title>
+  <title>Package individual icon from temaki with Webpack</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <link href="../../../assets/css/common.css" rel="stylesheet"> 
   <link href="../../../assets/css/highlightjs/color-brewer.css" rel="stylesheet"> 
   <script src="dist/bundle.js"></script>
 </head>
 <body>
-  <h1>Webpack + <a href="https://github.com/mapbox/maki/"
-                   target="blank">Maki</a></h1>
+  <h1>Webpack + <a href="https://github.com/ideditor/temaki/"
+                   target="blank">Temaki</a></h1>
   
   <div class="example" id="config">
     <h2>Configuration</h2>
@@ -20,7 +20,7 @@
     webpack \\
     webpack-cli \\
     svg-inline-loader \\
-    maki
+    temaki
 cat webpack.config.js</code></pre>
     <pre class="output"><code class="javascript">const path = require('path');
 
@@ -41,20 +41,20 @@ module.exports = {
 };</code></pre>
   </div>
   
-  
   <div class="example" id="icon-as-svg">
     <h2>Include an icon directly from SVG (svg-inline-loader required)</h2>
-    <pre class="inspect input"><code class="javascript">const cafeIcon = require("maki/icons/cafe-15.svg");
-console.log(cafeIcon);</code></pre>
+    <pre class="inspect input"><code class="javascript">const beachIconSVG = require("temaki/icons/beach.svg");
+console.log(beachIconSVG);</code></pre>
     <pre class="inspect output"><code class="javascript"></code></pre>
     
     <pre class="render input"><code class="javascript">const svgElem = new DOMParser().parseFromString(
-  cafeIcon, "text/xml").documentElement;
+  beachIconSVG, "text/xml").documentElement;
 svgElem.setAttribute("height", "30px");
 svgElem.setAttribute("width", "30px");
 
 document.querySelector("#container").appendChild(svgElem);</code></pre>
     <div class="render output"></div>
   </div>
+  
 </body>
 </html>
